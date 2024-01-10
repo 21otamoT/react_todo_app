@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+h1 {
+  margin: 0;
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 8px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+li input:checked + span {
+  color: #aaa;
+  text-decoration: line-through;
+}
+
+span::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  aspect-ratio: 1;
+  background: #1ca;
+}
+
+li input {
+  margin-right: 8px;
+}
+
+li label {
+  margin-right: 8px;
+}
+
+form {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+form input {
+  flex: 1;
+  padding: 4px;
+}
+
+.copy {
+  text-align: center;
+  font-size: 12px;
+}
