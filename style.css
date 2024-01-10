@@ -1,5 +1,20 @@
 @charset "utf-8";
 
+img {
+  position: fixed;
+  z-index: -1;
+  animation: logo-spin 20s infinite linear;
+}
+
+@keyframes logo-spin {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
 h1 {
   margin: 0;
   font-size: 20px;

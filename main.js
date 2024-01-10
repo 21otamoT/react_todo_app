@@ -124,6 +124,7 @@ const App = () => {
 
   return (
     <>
+      <img src="./logo.svg" />
       <h1>
         Todoリスト
         <button onClick={handlePurgeClick}>Purge</button>
