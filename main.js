@@ -71,7 +71,7 @@ const App = () => {
   };
 
   const handlePurgeClick = () => {
-    if (!confirm('Sure?')) {
+    if (!confirm('削除?')) {
       return;
     }
     const newTodos = todos.filter( todo => {
@@ -82,12 +82,13 @@ const App = () => {
 
   const handleAddFormSubmit = title => {
     const newTodos = [...todos];
+
     newTodos.push({
       id: Date.now(),
       title: title,
       isCompleted: false,
     });
-    updateTodos(newTodos);
+      updateTodos(newTodos);
   };
 
   const handleTodoCheckboxChange = id => {
@@ -102,7 +103,7 @@ const App = () => {
   };
 
   const handleTodoDeleteClick = id => {
-    if (!confirm('Sure?')) {
+    if (!confirm('削除?')) {
       return;
     }
     const newTodos = todos.filter( todo => {
@@ -112,6 +113,9 @@ const App = () => {
   };
 
   const todoItems = todos.map( todo => {
+    if (todo.title === "") {
+      return;
+    }
     return (
       <Todo
         key={todo.id}
