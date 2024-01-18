@@ -21,7 +21,7 @@ const AddForm = props => {
         onChange={handleTextChange}
         ref={inputRef}
       />
-      <button>Add</button>
+      <button className="add">Add</button>
     </form>
   );
 };
